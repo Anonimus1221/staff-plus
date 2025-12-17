@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project name="maven-antrun-" default="main">
-  <target name="main">
-    <mkdir dir="C:\Users\Usuario\Desktop\StaffPlus\StaffPlusCore/../releases/v4.0.0" />
-    <copy file="C:\Users\Usuario\Desktop\StaffPlus\StaffPlusCore\target/Staff+.jar" tofile="C:\Users\Usuario\Desktop\StaffPlus\StaffPlusCore/../releases/v4.0.0/Staff+.jar" overwrite="true" />
-    <echo>✓ JAR compilado en:
-                                    releases/v4.0.0/Staff+.jar</echo>
-  </target>
-</project>

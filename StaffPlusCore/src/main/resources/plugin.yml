@@ -1,0 +1,76 @@
+main: net.shortninja.staffplus.StaffPlus
+name: StaffPlus
+version: ${project.version}
+description: The ultimate moderation plugin!
+author: Usuario
+softdepend: [PacketListenerApi, PlaceholderAPI]
+api-version: 1.13
+min-nms-version: 1.13
+load: STARTUP
+commands:
+  staff:
+    description: Enables or disables staff mode
+    aliases: [mode, sm, staff-mode]
+    usage: /<command> <player> <enable|disable>
+  freeze:
+    description: Freezes or unfreezes a player
+    usage: /<command> <player> <enable|disable>
+  examine:
+    description: Examines a player's inventory
+    aliases: [inv]
+    usage: /<command> <player>
+  notes:
+    description: Adds or manages a player's notes
+    usage: /<command> [player] [note]
+  cps:
+    description: Starts a CPS test on a player
+    usage: /<command> <player>
+  sc:
+    description: Sends a message or toggles staff chat
+    aliases: [staff-chat]
+    usage: /<command> [message]
+  report:
+    description: Sends a report about a player
+    aliases: [rep]
+    usage: /<command> [player] [reason]
+  warn:
+    description: Sends or manages a warning
+    usage: /<command> [player] [reason]
+  vanish:
+    description: Enables or disables vanish
+    aliases: [v]
+    usage: /<command> [total|list] [player] [enable|disable]
+  chat:
+    description: Executes chat management actions
+    usage: /<command> [clear|toggle|slow] [enable|disable|time]
+  ticket:
+    description: Sends a ticket to staff
+    usage: /<command> [message]
+  alerts:
+    description: Manages alerts for staff
+    aliases: [alert]
+    usage: /<command> [namechange|mention|xray] [player] [enable|disable]
+  follow:
+    description: Follows or unfollows a player
+    usage: /<command> <player>
+  revive:
+    description: Returns a player's previous inventory
+    usage: /<command> [player]
+  personnel:
+    description: Lists all registered staff members
+    aliases: [stafflist, sl, staff-list]
+    usage: /<command> [all|online|away|offline]
+  strip:
+    description: Removes a player's armor
+    usage: /<command> [player]
+  staffplus:
+    description: Reloads config and language files
+    usage: /<command> [reload]
+  clear:
+    description: Clears a player's inventory
+    aliases: [ci, clearInv]
+    usage: /<command> [player]
+  eview:
+    description: Views a player's ender chest
+    aliases: [echest, ec, echest-view]
+    usage: /<command> [player]
