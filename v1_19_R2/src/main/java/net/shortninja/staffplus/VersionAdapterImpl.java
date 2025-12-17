@@ -1,0 +1,8 @@
+package net.shortninja.staffplus.version;
+
+/**
+ * Version adapter for Minecraft 1.19.2
+ */
+public class VersionAdapterImpl {
+    // Placeholder for version-specific implementations
+}
