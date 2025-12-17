@@ -11,13 +11,28 @@ Staff++ is maintained as an open collaboration project.
 
 ## What is Staff++?
 
-Staff++ is a comprehensive moderation plugin bridging professional server management with ease of use. It combines advanced features for handling player reports, staff gadgets, and administrative controls in one unified package. Whether you're running a small community server or a large network, Staff++ adapts to your needs.
+Staff++ is a comprehensive moderation plugin that bridges professional server management with ease of use. It combines advanced features for handling player reports, staff gadgets, and administrative controls in one unified package. Whether you're running a small community server or a large network, Staff++ adapts to your needs with a clean architecture and zero problematic dependencies.
+
+### Key Features:
+- **Advanced Moderation** - Freeze players, Vanish mode, Examine inventories, Real-time alerts
+- **Staff Gadgets** - Freecam, ItemRadar, XRay, NightVision, Invisible mode
+- **Ticket System** - Automated player reports and comprehensive ticket management
+- **Multi-Language** - Full support for 12 languages (EN, ES, DE, FR, IT, PT, NL, HR, HU, NO, SV, ZH)
+- **Flexible Storage** - YML flat file or MySQL database support
+- **Modern Architecture** - Clean codebase with version-specific adapters for all supported Minecraft versions
 
 Special thanks to the Spigot and Paper communities for their continuous support and feedback!
 
 ## Supported Versions
 
-Staff++ currently supports Minecraft Java Edition 1.17 - 1.21.11 across Spigot, Paper, and Bukkit servers. For more information on compatibility, please see [here](WIKI_NEW.md).
+Staff++ supports Minecraft Java Edition versions **1.17 through 1.21.11** across all major server software:
+- **Spigot** - Complete support
+- **Paper** - Full compatibility with latest versions
+- **Bukkit** - Full Bukkit API compliance
+
+Each version includes a dedicated version adapter ensuring optimal performance and compatibility.
+
+For detailed compatibility information, see the [WIKI](https://github.com/Anonimus1221/staff-plus/wiki).
 
 ## Setting Up
 
@@ -45,7 +60,14 @@ Some Minecraft mechanics limit what plugins can achieve. For detailed informatio
 
 ## Compiling
 
-1. Clone the repository to your computer
+### Requirements
+- Java 8 or higher
+- Maven 3.8.1+
+- Git
+
+### Build Instructions
+
+1. Clone the repository
    ```bash
    git clone https://github.com/Anonimus1221/staff-plus.git
    cd staff-plus
@@ -56,8 +78,11 @@ Some Minecraft mechanics limit what plugins can achieve. For detailed informatio
    mvn clean package -DskipTests
    ```
 
-3. Locate compiled JAR files
-   - `StaffPlusCore/target/Paper/Staff+.jar` - Paper server
+3. Locate compiled artifacts
+   - Main plugin: `StaffPlusCore/target/Staff+.jar`
+   - Version adapters: `v1_XX_RX/target/v1_XX_RX-4.0.0.jar` (for each version)
+
+The build system automatically creates 14 JAR files: 1 API, 1 Core plugin, 1 Bungee adapter, and 11 version-specific adapters.
 ## Contributing
 
 Any contributions are appreciated. Feel free to reach out on GitHub if you're interested in helping improve Staff++.
