@@ -1,4 +1,4 @@
-![logo](https://cdn.modrinth.com/data/cached_images/05bf5b95ecb54cec29b55bc675b1ba3501186725.png)
+![logo](assets/ico/logo.png)
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.17--1.21.11-brightgreen.svg)](https://www.minecraft.net)
