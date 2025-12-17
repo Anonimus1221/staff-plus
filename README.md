@@ -25,7 +25,7 @@ Take a look [here](WIKI_NEW.md) for comprehensive installation and configuration
 
 ## Links:
 
-- Documentation: [WIKI_NEW.md](WIKI_NEW.md)
+- Documentation: [WIKI](https://github.com/Anonimus1221/staff-plus/wiki)
 - GitHub: https://github.com/Anonimus1221/staff-plus
 - License: MIT
 - Supported Servers: Spigot, Paper, Bukkit
@@ -58,9 +58,6 @@ Some Minecraft mechanics limit what plugins can achieve. For detailed informatio
 
 3. Locate compiled JAR files
    - `StaffPlusCore/target/Paper/Staff+.jar` - Paper server
-   - `StaffPlusCore/target/Spigot/Staff+.jar` - Spigot server
-   - `StaffPlusCore/target/Bukkit/Staff+.jar` - Bukkit server
-
 ## Contributing
 
 Any contributions are appreciated. Feel free to reach out on GitHub if you're interested in helping improve Staff++.
@@ -107,3 +104,4 @@ Configuration files are located in `plugins/StaffPlus/`:
 Last updated: December 2025
 
 </div>
+
