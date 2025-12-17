@@ -50,10 +50,9 @@ public class ExamineGui extends AbstractGui {
             setItem(options.modeExamineIp, ipItem(targetPlayer), null);
         }
 
-
-//        if (options.modeExaminePing >= 0) {
-//            setItem(options.modeExaminePing, pingItem(targetPlayer), null);
-//        }
+        // if (options.modeExaminePing >= 0) {
+        // setItem(options.modeExaminePing, pingItem(targetPlayer), null);
+        // }
 
         if (options.modeExamineGamemode >= 0) {
             setItem(options.modeExamineGamemode, gameModeItem(targetPlayer), null);
@@ -76,10 +75,9 @@ public class ExamineGui extends AbstractGui {
         for (int i = 0; i < items.length; i++) {
             setItem(i, items[i], null);
         }
-        for (int i = 0; i <= armor.length - 1; i++)
-        {
+        for (int i = 0; i <= armor.length - 1; i++) {
             if (i == 3) {
-                setItem(39 + i, targetPlayer.getItemInHand(), null);
+                setItem(39 + i, targetPlayer.getEquipment().getItemInMainHand(), null);
             }
             setItem(38 + i, armor[i], null);
         }
@@ -172,7 +170,8 @@ public class ExamineGui extends AbstractGui {
                         public void execute(Player player, String input) {
                             UUID uuid = targetPlayer.getUniqueId();
 
-                            infractionCoordinator.sendWarning(player, new Warning(uuid, targetPlayer.getName(), input, player.getName(), player.getUniqueId(), System.currentTimeMillis()));
+                            infractionCoordinator.sendWarning(player, new Warning(uuid, targetPlayer.getName(), input,
+                                    player.getName(), player.getUniqueId(), System.currentTimeMillis()));
                             message.send(player, messages.inputAccepted, messages.prefixGeneral);
                         }
 
@@ -218,7 +217,8 @@ public class ExamineGui extends AbstractGui {
     }
 
     private ItemStack ipItem(Player player) {
-        String ip = player.hasPermission(options.ipHidePerm) ? "127.0.0.1" : player.getAddress().getAddress().getHostAddress().replace("/", "");
+        String ip = player.hasPermission(options.ipHidePerm) ? "127.0.0.1"
+                : player.getAddress().getAddress().getHostAddress().replace("/", "");
 
         ItemStack item = Items.builder()
                 .setMaterial(Material.COMPASS).setAmount(1)
@@ -251,11 +251,14 @@ public class ExamineGui extends AbstractGui {
 
     private ItemStack infractionsItem(IUser user) {
         List<String> lore = new ArrayList<String>();
-        IReport latestReport = user.getReports().size() >= 1 ? user.getReports().get(user.getReports().size() - 1) : null;
+        IReport latestReport = user.getReports().size() >= 1 ? user.getReports().get(user.getReports().size() - 1)
+                : null;
         String latestReason = latestReport == null ? "null" : latestReport.getReason();
 
         for (String string : messages.infractionItem) {
-            lore.add(string.replace("%warnings%", Integer.toString(user.getWarnings().size())).replace("%reports%", Integer.toString(user.getReports().size())).replace("%reason%", latestReason));
+            lore.add(string.replace("%warnings%", Integer.toString(user.getWarnings().size()))
+                    .replace("%reports%", Integer.toString(user.getReports().size()))
+                    .replace("%reason%", latestReason));
         }
 
         ItemStack item = Items.builder()
@@ -273,14 +276,16 @@ public class ExamineGui extends AbstractGui {
         ItemStack item = Items.builder()
                 .setMaterial(Material.MAP).setAmount(1)
                 .setName("&bLocation")
-                .addLore(messages.examineLocation.replace("%location%", location.getWorld().getName() + " &8� &7" + JavaUtils.serializeLocation(location)))
+                .addLore(messages.examineLocation.replace("%location%",
+                        location.getWorld().getName() + " &8� &7" + JavaUtils.serializeLocation(location)))
                 .build();
 
         return item;
     }
 
     private ItemStack notesItem(IUser user) {
-        List<String> notes = user.getPlayerNotes().isEmpty() ? Arrays.asList("&7No notes found") : user.getPlayerNotes();
+        List<String> notes = user.getPlayerNotes().isEmpty() ? Arrays.asList("&7No notes found")
+                : user.getPlayerNotes();
 
         ItemStack item = Items.builder()
                 .setMaterial(Material.MAP).setAmount(1)

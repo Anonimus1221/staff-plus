@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerPickupItemEvent;
+import org.bukkit.event.entity.EntityPickupItemEvent;
 
 public class PlayerPickupItem implements Listener {
     private Options options = StaffPlus.get().options;
@@ -19,8 +19,10 @@ public class PlayerPickupItem implements Listener {
     }
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
-    public void onPickup(PlayerPickupItemEvent event) {
-        Player player = event.getPlayer();
+    public void onPickup(EntityPickupItemEvent event) {
+        if (!(event.getEntity() instanceof Player))
+            return;
+        Player player = (Player) event.getEntity();
 
         if (options.modeItemChange || !modeCoordinator.isInMode(player.getUniqueId())) {
             return;

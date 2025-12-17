@@ -11,6 +11,7 @@ import net.shortninja.staffplus.util.MessageCoordinator;
 import net.shortninja.staffplus.util.PermissionHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffectType;
 
 import java.util.List;
@@ -53,7 +54,7 @@ public class VanishHandler {
     }
 
     public List<Player> getVanished() {
-       return Bukkit.getOnlinePlayers().stream().filter(this::isVanished).collect(Collectors.toList());
+        return Bukkit.getOnlinePlayers().stream().filter(this::isVanished).collect(Collectors.toList());
 
     }
 
@@ -79,14 +80,15 @@ public class VanishHandler {
         switch (vanishType) {
             case TOTAL:
                 if (permission.has(player, options.permissionVanishTotal)) {
+                    Plugin plugin = StaffPlus.get();
                     if (options.staffView) {
                         for (Player p : Bukkit.getOnlinePlayers()) {
                             if (!permission.has(p, options.permissionMode))
-                                p.hidePlayer(player);
+                                p.hidePlayer(plugin, player);
                         }
                     } else {
                         for (Player p : Bukkit.getOnlinePlayers()) {
-                            p.hidePlayer(player);
+                            p.hidePlayer(plugin, player);
                         }
                     }
                 }
@@ -115,8 +117,9 @@ public class VanishHandler {
 
         switch (vanishType) {
             case TOTAL:
+                Plugin plugin = StaffPlus.get();
                 for (Player p : Bukkit.getOnlinePlayers()) {
-                    p.showPlayer(player);
+                    p.showPlayer(plugin, player);
                 }
 
                 player.removePotionEffect(PotionEffectType.INVISIBILITY);

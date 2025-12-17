@@ -79,7 +79,6 @@ public class GadgetHandler {
     public void onCompass(Player player) {
         Vector vector = player.getLocation().getDirection();
 
-
         player.setVelocity(JavaUtils.makeVelocitySafe(vector.multiply(options.modeCompassVelocity)));
     }
 
@@ -97,22 +96,24 @@ public class GadgetHandler {
 
             do {
                 currentPlayer = onlinePlayers.get(random.nextInt(onlinePlayers.size()));
-            }
-            while (player.getName().equals(currentPlayer.getName()) || permission.has(currentPlayer, options.permissionMember));
+            } while (player.getName().equals(currentPlayer.getName())
+                    || permission.has(currentPlayer, options.permissionMember));
         } else {
             UUID uuid = player.getUniqueId();
             int lastIndex = lastRandomTeleport.get(uuid) == null ? 0 : lastRandomTeleport.get(uuid);
 
             if ((lastIndex + 1) < onlinePlayers.size()) {
                 lastIndex++;
-            } else lastIndex = 0;
+            } else
+                lastIndex = 0;
 
             currentPlayer = onlinePlayers.get(lastIndex);
 
             if (count >= onlinePlayers.size()) {
                 message.send(player, messages.modeNotEnoughPlayers, messages.prefixGeneral);
                 return;
-            } else if (player.getName().equals(currentPlayer.getName()) || permission.has(currentPlayer, options.permissionMember)) {
+            } else if (player.getName().equals(currentPlayer.getName())
+                    || permission.has(currentPlayer, options.permissionMember)) {
                 lastRandomTeleport.put(uuid, lastIndex);
                 onRandomTeleport(player, count + 1);
                 return;
@@ -135,14 +136,16 @@ public class GadgetHandler {
 
             if (shouldUpdateItem && item != null) {
                 player.getInventory().remove(item);
-                player.getInventory().setItem(slot, versionProtocol.addNbtString(options.modeVanishItemOff, modeItem.getIdentifier()));
+                player.getInventory().setItem(slot,
+                        versionProtocol.addNbtString(options.modeVanishItemOff, modeItem.getIdentifier()));
             }
         } else {
             StaffPlus.get().vanishHandler.addVanish(player, options.modeVanish);
 
             if (shouldUpdateItem && item != null) {
                 player.getInventory().remove(item);
-                player.getInventory().setItem(slot, versionProtocol.addNbtString(options.modeVanishItem, modeItem.getIdentifier()));
+                player.getInventory().setItem(slot,
+                        versionProtocol.addNbtString(options.modeVanishItem, modeItem.getIdentifier()));
             }
         }
     }
@@ -162,7 +165,8 @@ public class GadgetHandler {
 
         if (freezeHandler.isFrozen(targetPlayer.getUniqueId())) {
             freezeHandler.removeFreeze(sender, targetPlayer, true);
-        } else freezeHandler.addFreeze(sender, targetPlayer, true);
+        } else
+            freezeHandler.addFreeze(sender, targetPlayer, true);
     }
 
     public void onCps(CommandSender sender, Player targetPlayer) {
@@ -191,7 +195,7 @@ public class GadgetHandler {
             return;
         }
 
-        targetPlayer.setPassenger(player);
+        targetPlayer.addPassenger(player);
     }
 
     public void onCustom(Player player, Player targetPlayer, ModuleConfiguration moduleConfiguration) {
@@ -201,14 +205,17 @@ public class GadgetHandler {
                 break;
             case COMMAND_DYNAMIC:
                 if (targetPlayer != null) {
-                    Bukkit.dispatchCommand(player, moduleConfiguration.getAction().replace("%clicker%", player.getName()).replace("%clicked%", targetPlayer.getName()));
+                    Bukkit.dispatchCommand(player, moduleConfiguration.getAction()
+                            .replace("%clicker%", player.getName()).replace("%clicked%", targetPlayer.getName()));
                 }
                 break;
             case COMMAND_CONSOLE:
                 if (targetPlayer != null) {
-                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), moduleConfiguration.getAction().replace("%clicker%", player.getName()).replace("%clicked%", targetPlayer.getName()));
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), moduleConfiguration.getAction()
+                            .replace("%clicker%", player.getName()).replace("%clicked%", targetPlayer.getName()));
                 } else
-                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), moduleConfiguration.getAction().replace("%clicker%", player.getName()));
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(),
+                            moduleConfiguration.getAction().replace("%clicker%", player.getName()));
                 break;
             default:
                 break;
