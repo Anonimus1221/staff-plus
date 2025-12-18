@@ -36,11 +36,11 @@ For detailed compatibility information, see the [WIKI](https://github.com/Anonim
 
 ## Setting Up
 
-Take a look [here](WIKI.md) for comprehensive installation and configuration guides.
+Take a look [here](WIKI) for comprehensive installation and configuration guides.
 
 ## Links:
 
-- **Documentation**: [WIKI - Complete Guide](WIKI.md)
+- **Documentation**: [WIKI - Complete Guide](WIKI)
 - **GitHub**: https://github.com/Anonimus1221/staff-plus
 - **License**: MIT
 - **Supported Servers**: Spigot, Paper, Bukkit
@@ -111,9 +111,10 @@ Configuration files are located in `plugins/StaffPlus/`:
 
 **Made with ❤️ by Anonimus1221**
 
-[GitHub](https://github.com/Anonimus1221/staff-plus) • [License](LICENSE) • [Documentation](WIKI.md)
+[GitHub](https://github.com/Anonimus1221/staff-plus) • [License](LICENSE) • [Documentation](WIKI)
 
 Last updated: December 2025
 
 </div>
+
 
