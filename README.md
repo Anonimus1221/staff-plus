@@ -36,29 +36,16 @@ For detailed compatibility information, see the [WIKI](https://github.com/Anonim
 
 ## Setting Up
 
-Take a look [here](WIKI_NEW.md) for comprehensive installation and configuration guides.
+Take a look [here](WIKI.md) for comprehensive installation and configuration guides.
 
 ## Links:
 
-- Documentation: [WIKI](https://github.com/Anonimus1221/staff-plus/wiki)
-- GitHub: https://github.com/Anonimus1221/staff-plus
-- License: MIT
-- Supported Servers: Spigot, Paper, Bukkit
+- **Documentation**: [WIKI - Complete Guide](WIKI.md)
+- **GitHub**: https://github.com/Anonimus1221/staff-plus
+- **License**: MIT
+- **Supported Servers**: Spigot, Paper, Bukkit
 
-## Key Features
-
-- **Advanced Moderation System** - Freeze, Vanish, Examine, Alerts
-- **Staff Gadgets** - Freecam, ItemRadar, XRay, NightVision, Invisible
-- **Ticket System** - Automated player reports and ticket management
-- **Multi-Language** - Support for 7+ languages
-- **Flexible Database** - YML or MySQL storage
-- **Clean Architecture** - Modern code structure with zero problematic dependencies
-
-## What can't be fixed
-
-Some Minecraft mechanics limit what plugins can achieve. For detailed information on current limitations and workarounds, see the [WIKI_NEW.md](WIKI_NEW.md) documentation.
-
-## Compiling
+## Contributing
 
 ### Requirements
 - Java 8 or higher
@@ -124,7 +111,7 @@ Configuration files are located in `plugins/StaffPlus/`:
 
 **Made with ❤️ by Anonimus1221**
 
-[GitHub](https://github.com/Anonimus1221/staff-plus) • [License](LICENSE) • [Documentation](WIKI_NEW.md)
+[GitHub](https://github.com/Anonimus1221/staff-plus) • [License](LICENSE) • [Documentation](WIKI.md)
 
 Last updated: December 2025
 
