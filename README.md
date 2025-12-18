@@ -36,7 +36,7 @@ For detailed compatibility information, see the [WIKI](https://github.com/Anonim
 
 ## Setting Up
 
-Take a look [here](WIKI) for comprehensive installation and configuration guides.
+Take a look [here](https://github.com/Anonimus1221/staff-plus/wiki) for comprehensive installation and configuration guides.
 
 ## Links:
 
@@ -116,6 +116,3 @@ Configuration files are located in `plugins/StaffPlus/`:
 Last updated: December 2025
 
 </div>
-
-
-
