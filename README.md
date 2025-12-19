@@ -38,7 +38,40 @@ For detailed compatibility information, see the [WIKI](https://github.com/Anonim
 
 Take a look [here](https://github.com/Anonimus1221/staff-plus/wiki) for comprehensive installation and configuration guides.
 
+## Commands
+
+### User Commands
+
+- **/report**: Report a player for misconduct.
+- **/ticket**: Create and manage support tickets.
+- **/notes**: View notes about players.
+- **/login**: Staff login (if you have permission).
+- **/register**: Register a staff password (if you have permission).
+- **/changepassword**: Change your own password.
+
+### Staff Commands
+
+- **/staff**: Toggle staff mode.
+- **/freeze**: Freeze or unfreeze a player.
+- **/examine**: Examine a player's inventory.
+- **/cps**: Run a clicks-per-second test on a player.
+- **/sc**: Toggle and use staff chat.
+- **/warn**: Warn and manage player warnings.
+- **/vanish**: Toggle vanish mode.
+- **/chat**: Manage global chat.
+- **/alerts**: Manage alerts.
+- **/follow**: Follow a player.
+- **/revive**: Revive a player.
+- **/personnel**: List staff members.
+- **/strip**: Strip a player's armor.
+- **/clear**: Clear a player's inventory.
+- **/resetPassword**: Reset a user's password.
+
+> **Note:** All commands are subject to change. See documentation for details and permissions.
 ## Links:
+## Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/JmU0AixDU1E/0.jpg)](https://youtu.be/JmU0AixDU1E)
 
 - **Documentation**: [WIKI - Complete Guide](https://github.com/Anonimus1221/staff-plus/wiki)
 - **GitHub**: https://github.com/Anonimus1221/staff-plus
