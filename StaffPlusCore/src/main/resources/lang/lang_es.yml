@@ -14,6 +14,7 @@
 # El prefijo para todos los mensajes que no estan relacionados con un modulo en concreto.
 general-prefix: "&dStaff+ &8»"
 
+
 # El prefijo para todos los mensajes relacionados con reportes.
 reports-prefix: "&dReportes &8»"
 
@@ -41,6 +42,7 @@ staff-list-entry: "&b%player% &%statuscolor%•"
 # Lineas están separadas por comas.
 staff-list-end: "&7%longline%"
 
+
 lockdown: "&bEste servidor esta cerrado para fines de seguridad."
 
 revived-staff: "&bHas reestablecido el inventario de &7%target%'s &ba su estado anterior!"
@@ -57,11 +59,12 @@ note-list-entry: "&b%count% &7%note%"
 # Lines are separated by commas
 note-list-end: "&7%longline%"
 
-login-register: "&bDado que eres personal, debes registrar una contraseña para proteger tu cuenta. Utiliza &7/register <contraseña> <confirmar>&b."
-login-registered: "&b¡Contraseña registrada! Te pediremos que la ingreses cada vez que te conectes."
-login-waiting: "&bHas sido congelado. Por favor ingresa tu contraseña de staff con &7/login <contraseña>&b para continuar."
-login-accepted: "&b¡Autenticado! Ahora tienes acceso total."
+login-register: "&bDado que usted es el personal, debe registrarse una contraseña para proteger su cuenta de ser secuestrado. Utilizar y &7/registro &bpara registrar."
+login-registered: "&bContraseña aceptada! Se le pedirá a utilizar esta contraseña cada vez que se conecte."
+login-waiting: "&bYou have been frozen! Please enter your staff password to continue."
+login-accepted: "&bConectado."
 passwords-dont-match: "&bLas contraseñas no coinciden"
+
 
 no-permission: "&cTu no tienes permisos para usar eso!"
 bypassed: "&cEse jugador evita este comando!"
@@ -127,6 +130,7 @@ blacklist-chat-format: "&7%player% &8» &7%message%"
 # +------------------------------------------------------+ #
 ############################################################
 
+
 total-vanish: "&bTu invisibilidad &7%status%&b!"
 list-vanish: "&bTu lista de invisibilidad ha sido &7%status%&b!"
 
@@ -135,6 +139,7 @@ list-vanish: "&bTu lista de invisibilidad ha sido &7%status%&b!"
 # |                       Tickets                        | #
 # +------------------------------------------------------+ #
 ############################################################
+
 
 ticket-submitted: "&bTu ticket ha sido entregado! &7(#%ticket%)"
 ticket-opened: "&bEl ticket &7#%ticket% &bha sido marcado como abierto por ti!"
@@ -155,6 +160,7 @@ ticket-list-end: "&7%longline%"
 # +------------------------------------------------------+ #
 ############################################################
 
+
 alerts-name: "&b&7%old% &bha cambiado su nombre a &7%new%&b!"
 alerts-mention: "&7%target% &bha mencionado tu nombre en el chat!"
 alerts-xray: "&b&7%target% &bha minado &7%count% %itemtype%&b! &7(%lightlevel%&7)"
@@ -164,6 +170,7 @@ alerts-xray: "&b&7%target% &bha minado &7%count% %itemtype%&b! &7(%lightlevel%&7
 # |                    Modo de Staff                     | #
 # +------------------------------------------------------+ #
 ############################################################
+
 
 mode-status: "&bTu servicio como staff fue &7%status%&b."
 mode-original-location: "&bHas sido transportado a tu ubicacion original!"
@@ -202,6 +209,7 @@ examine-notes-note: "&b%player%: &7%note%"
 
 follow: "&bAhora estas &7%status% a %target%&b."
 strip: "&7%player%'s armadura ha sido removida!"
+
 
 # No cambies esto si no sabes que es!!!!!!
 lang-version: 6197

@@ -5,7 +5,7 @@
 set -e
 
 echo "=========================================="
-echo "Staff++ v5.0.0 Build Script"
+echo "Staff++ v4.0.0 Build Script"
 echo "=========================================="
 echo ""
 
@@ -33,6 +33,6 @@ echo "=========================================="
 echo "Build completed successfully!"
 echo "=========================================="
 echo ""
-echo "JAR location: StaffPlusCore/target/StaffPlus.jar"
-echo "Version: 5.0.0"
+echo "JAR location: StaffPlusCore/target/Staff+.jar"
+echo "Version: 4.0.0"
 echo "Target Java: 1.8+"

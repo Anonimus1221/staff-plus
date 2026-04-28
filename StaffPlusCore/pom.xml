@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>StaffPlus</artifactId>
         <groupId>net.shortninja.staffplus</groupId>
@@ -10,7 +10,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>StaffPlus-Core</artifactId>
+    <artifactId>StaffPlusCore</artifactId>
 
 
     <build>
@@ -96,7 +96,7 @@
             <version>1.1.1</version>
             <scope>provided</scope>
         </dependency>
-      
+
         <!-- Local version adapter modules - resolved by Maven reactor -->
         <dependency>
             <groupId>net.shortninja.staffplus</groupId>
@@ -164,7 +164,13 @@
             <version>${project.parent.version}</version>
             <scope>provided</scope>
         </dependency>
-      
+        <dependency>
+            <groupId>net.shortninja.staffplus</groupId>
+            <artifactId>v26_1_R1</artifactId>
+            <version>${project.parent.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- @formatter:on -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>

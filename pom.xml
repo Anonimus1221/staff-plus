@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="http://maven.apache.org/POM/4.0.0"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -26,6 +26,7 @@
         <module>v1_20_R3</module>
         <module>v1_20_R4</module>
         <module>v1_21_R1</module>
+        <module>v26_1_R1</module>
     </modules>
 
     <properties>
@@ -101,6 +102,11 @@
             <dependency>
                 <groupId>net.shortninja.staffplus</groupId>
                 <artifactId>v1_21_R1</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.shortninja.staffplus</groupId>
+                <artifactId>v26_1_R1</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
