@@ -146,6 +146,6 @@ Configuration files are located in `plugins/StaffPlus/`:
 
 [GitHub](https://github.com/Anonimus1221/staff-plus) • [License](LICENSE) • [Documentation](https://github.com/Anonimus1221/staff-plus/wiki)
 
-Last updated: December 2025
+Last updated: December 2026
 
 </div>
