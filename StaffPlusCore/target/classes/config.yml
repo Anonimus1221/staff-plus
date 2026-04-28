@@ -242,7 +242,7 @@ alerts-module:
 login:
   # Whether or not /login will be enabled.
   # This is just a security feature that can be used to prevent staff accounts from being hijacked on your server.
-  enabled: false
+  enabled: true
 
   # The kick message that is sent when a player enters an invalid password.
   kick-message: "&cInvalid login password!"
