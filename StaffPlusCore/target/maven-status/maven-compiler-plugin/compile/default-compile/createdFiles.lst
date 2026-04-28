@@ -10,6 +10,7 @@ net\shortninja\staffplus\server\chat\BlacklistFactory.class
 net\shortninja\staffplus\server\command\cmd\mode\ModeCmd.class
 net\shortninja\staffplus\server\data\file\DataFile.class
 net\shortninja\staffplus\player\attribute\mode\handler\FreezeHandler.class
+net\shortninja\staffplus\server\UpdateChecker.class
 net\shortninja\staffplus\player\attribute\gui\FreezeGui.class
 net\shortninja\staffplus\player\attribute\mode\item\ModuleConfiguration.class
 net\shortninja\staffplus\util\GlassData.class
@@ -94,6 +95,7 @@ net\shortninja\staffplus\server\listener\InventoryClose$1.class
 net\shortninja\staffplus\player\attribute\mode\handler\GadgetHandler$1.class
 net\shortninja\staffplus\server\command\cmd\PersonnelCmd.class
 net\shortninja\staffplus\player\NodeUser.class
+net\shortninja\staffplus\server\listener\player\UpdateNotificationListener.class
 net\shortninja\staffplus\util\Metrics$DrilldownPie.class
 net\shortninja\staffplus\server\command\cmd\mode\CpsCmd.class
 net\shortninja\staffplus\player\attribute\gui\CounterGui.class

@@ -45,6 +45,7 @@ C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\s
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\util\factory\InventoryFactory.java
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\server\listener\entity\EntityTarget.java
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\server\data\Load.java
+C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\server\UpdateChecker.java
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\server\command\cmd\mode\FreezeCmd.java
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\server\chat\BlacklistFactory.java
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\server\command\cmd\EChestView.java
@@ -53,6 +54,7 @@ C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\s
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\player\attribute\mode\handler\InventoryHandler.java
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\server\listener\InventoryOpen.java
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\player\attribute\infraction\Warning.java
+C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\server\listener\player\UpdateNotificationListener.java
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\player\attribute\gui\hub\HubGui.java
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\player\attribute\mode\handler\GadgetHandler.java
 C:\Users\Usuario\Downloads\projects\staff-plus\StaffPlusCore\src\main\java\net\shortninja\staffplus\server\command\cmd\mode\VanishCmd.java

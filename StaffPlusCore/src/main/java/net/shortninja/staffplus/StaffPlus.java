@@ -9,6 +9,7 @@ import net.shortninja.staffplus.player.attribute.mode.ModeCoordinator;
 import net.shortninja.staffplus.player.attribute.mode.handler.*;
 import net.shortninja.staffplus.server.AlertCoordinator;
 import net.shortninja.staffplus.server.PacketModifier;
+import net.shortninja.staffplus.server.UpdateChecker;
 import net.shortninja.staffplus.server.chat.ChatHandler;
 import net.shortninja.staffplus.server.command.CmdHandler;
 import net.shortninja.staffplus.server.compatibility.IProtocol;
@@ -85,6 +86,7 @@ public class StaffPlus extends JavaPlugin implements IStaffPlus {
     public IStorage storage;
     public InventoryHandler inventoryHandler;
     public boolean usesPlaceholderAPI;
+    public UpdateChecker updateChecker;
 
     public static StaffPlus get() {
         return plugin;
@@ -248,6 +250,7 @@ public class StaffPlus extends JavaPlugin implements IStaffPlus {
         new PlayerInteract();
         new PlayerLogin();
         new PlayerJoin();
+        new UpdateNotificationListener();
         new PlayerPickupItem();
         new PlayerQuit();
         new BlockBreak();
@@ -265,7 +268,17 @@ public class StaffPlus extends JavaPlugin implements IStaffPlus {
     }
 
     private void checkUpdate() {
-        // Update checking disabled
+        if (getConfig().getBoolean("updates.check-enabled", true)) {
+            updateChecker = new UpdateChecker(this);
+            updateChecker.startAsyncCheck();
+
+            // Verificar actualizaciones cada 30 minutos durante el gameplay
+            Bukkit.getScheduler().runTaskTimerAsynchronously(this,
+                    updateChecker::startAsyncCheck,
+                    20 * 60 * 30, // 30 minutos después del inicio
+                    20 * 60 * 30 // Repetir cada 30 minutos
+            );
+        }
     }
 
     /*

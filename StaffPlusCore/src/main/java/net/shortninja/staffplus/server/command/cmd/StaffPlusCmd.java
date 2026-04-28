@@ -34,7 +34,10 @@ public class StaffPlusCmd extends BukkitCommand {
                     Bukkit.getPluginManager().getPlugin("StaffPlus").reloadConfig();
                     StaffPlus.get().reloadFiles();
                     StaffPlus.get().message.sendConsoleMessage("Plugin config and lang file reloaded", false);
-                    StaffPlus.get().message.send((Player) sender, "Config and lang file have been reloaded", "StaffPlus");
+                    StaffPlus.get().message.send((Player) sender, "Config and lang file have been reloaded",
+                            "StaffPlus");
+                } else if (args[0].equalsIgnoreCase("check-update") || args[0].equalsIgnoreCase("update")) {
+                    handleUpdateCheck(sender);
                 }
             }
         } else {
@@ -43,16 +46,70 @@ public class StaffPlusCmd extends BukkitCommand {
                     Bukkit.getPluginManager().getPlugin("StaffPlus").reloadConfig();
                     StaffPlus.get().reloadFiles();
                     StaffPlus.get().message.sendConsoleMessage("Plugin config and lang file reloaded", false);
+                } else if (args[0].equalsIgnoreCase("check-update") || args[0].equalsIgnoreCase("update")) {
+                    handleUpdateCheck(sender);
                 }
             }
         }
         return true;
     }
 
+    private void handleUpdateCheck(CommandSender sender) {
+        StaffPlus plugin = StaffPlus.get();
+        if (plugin.updateChecker == null) {
+            message.send(sender, "§cUpdate checker is not initialized", "StaffPlus");
+            return;
+        }
+
+        message.send(sender, "§aChecking for updates...", "StaffPlus");
+
+        // Si ya se completó la verificación, mostrar resultado inmediatamente
+        if (plugin.updateChecker.isCheckCompleted()) {
+            showUpdateStatus(sender, plugin);
+        } else {
+            // Esperar a que se complete la verificación
+            Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
+                // Hacer una verificación inmediata
+                plugin.updateChecker.startAsyncCheck();
+
+                // Esperar hasta 5 segundos para que se complete
+                for (int i = 0; i < 50; i++) {
+                    if (plugin.updateChecker.isCheckCompleted()) {
+                        Bukkit.getScheduler().runTask(plugin, () -> showUpdateStatus(sender, plugin));
+                        return;
+                    }
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
+
+                // Timeout
+                Bukkit.getScheduler().runTask(plugin,
+                        () -> message.send(sender, "§cUpdate check timed out. Please try again later.", "StaffPlus"));
+            });
+        }
+    }
+
+    private void showUpdateStatus(CommandSender sender, StaffPlus plugin) {
+        String current = plugin.getDescription().getVersion();
+        if (plugin.updateChecker.isUpdateAvailable()) {
+            String latest = plugin.updateChecker.getLatestVersion();
+            message.send(sender, "§c§lNew version available!", "StaffPlus");
+            message.send(sender, "§fCurrent: §c" + current, "");
+            message.send(sender, "§fLatest: §a" + latest, "");
+            message.send(sender, "§fDownload: §bhttps://modrinth.com/plugin/staff-plus/versions", "");
+        } else {
+            message.send(sender, "§aYou are running the latest version!", "StaffPlus");
+            message.send(sender, "§fCurrent: §a" + current, "");
+        }
+    }
+
     @Override
     public List<String> tabComplete(CommandSender sender, String alias, String[] args) throws IllegalArgumentException {
         if (args.length == 0) {
-            return Collections.singletonList("reload");
+            return List.of("reload", "check-update");
         }
 
         return super.tabComplete(sender, alias, args);

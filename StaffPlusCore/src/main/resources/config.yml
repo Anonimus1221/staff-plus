@@ -1012,4 +1012,12 @@ sound-names: random.chestopen, random.chestclosed
 
 #Used to turn on or off metrics please keep true
 metrics: true
+
+# Update checking settings
+# Check for new versions on Modrinth
+updates:
+  # Whether to enable automatic version checking
+  check-enabled: true
+  # Download URL for updates (Modrinth)
+  download-url: "https://modrinth.com/plugin/staff-plus/versions"
 # you're done with the config file, shit waddup
