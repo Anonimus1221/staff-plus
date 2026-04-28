@@ -10,6 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>StaffPlusAPI</artifactId>
+    <packaging>jar</packaging>
+
     <dependencies>
         <!-- Bukkit API - provided by Spigot servers -->
         <dependency>
