@@ -26,6 +26,7 @@
         <module>v1_20_R4</module>
         <module>v1_21_R1</module>
         <module>v26_1_R1</module>
+        <module>v26_1_R2</module>
     </modules>
 
     <properties>
@@ -105,6 +106,11 @@
             <dependency>
                 <groupId>net.shortninja.staffplus</groupId>
                 <artifactId>v26_1_R1</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.shortninja.staffplus</groupId>
+                <artifactId>v26_1_R2</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
