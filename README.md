@@ -71,7 +71,7 @@ Take a look [here](https://github.com/Anonimus1221/staff-plus/wiki) for comprehe
 ## Links:
 ## Demo Video
 
-[![Watch the demo](https://img.youtube.com/vi/JmU0AixDU1E/0.jpg)](https://youtu.be/h7C2vApDCpw)
+[![Watch the demo](https://youtu.be/h7C2vApDCpw)](https://youtu.be/h7C2vApDCpw)
 
 - **Documentation**: [WIKI - Complete Guide](https://github.com/Anonimus1221/staff-plus/wiki)
 - **GitHub**: https://github.com/Anonimus1221/staff-plus
