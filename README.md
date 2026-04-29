@@ -100,7 +100,7 @@ Take a look [here](https://github.com/Anonimus1221/staff-plus/wiki) for comprehe
 
 3. Locate compiled artifacts
    - Main plugin: `StaffPlusCore/target/Staff+.jar`
-   - Version adapters: `v1_XX_RX/target/v1_XX_RX-4.0.0.jar` (for each version)
+   - Version adapters: `v1_XX_RX/target/v1_XX_RX-5.0.0.jar` (for each version)
 
 The build system automatically creates 14 JAR files: 1 API, 1 Core plugin, 1 Bungee adapter, and 11 version-specific adapters.
 ## Contributing
@@ -134,7 +134,7 @@ Configuration files are located in `plugins/StaffPlus/`:
 ## System Requirements
 
 - Java 8 or higher
-- Minecraft 1.17 - 1.21.11
+- Minecraft 1.17 - 26.1
 - At least 2GB RAM (4GB+ recommended)
 - Spigot, Paper, or Bukkit server
 
